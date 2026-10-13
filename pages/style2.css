@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 56px;
+    background-color: #0f0f0f;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    gap: 16px;
+}
+
+.header-center {
+    gap: 12px;
+    flex: 0 1 728px;
+    justify-content: center;
+}
+
+.header-right {
+    gap: 12px;
+}
+
+/* Кнопки з іконками */
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: #272727;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+
+.logo sup {
+    font-size: 10px;
+    color: #aaa;
+    margin-left: 2px;
+}
+
+/* Пошуковий блок */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    background-color: #121212;
+    border: 1px solid #303030;
+    border-right: none;
+    border-radius: 40px 0 0 40px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #1c62b9;
+}
+
+.search-btn {
+    width: 64px;
+    height: 40px;
+    background-color: #222222;
+    border: 1px solid #303030;
+    border-radius: 0 40px 40px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #272727;
+}
+
+.mic-btn {
+    background-color: #222222;
+}
+
+/* Права частина шапки */
+.create-btn {
+    background-color: #272727;
+    border: none;
+    color: #fff;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.create-btn:hover {
+    background-color: #3f3f3f;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #d84315;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 240px;
+    background-color: #0f0f0f;
+    padding: 12px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.section-title {
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+.nav-item {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 0 12px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #272727;
+}
+
+.nav-item.active {
+    background-color: #272727;
+    font-weight: 500;
+}
+
+.channel-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #555;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #272727;
+    margin: 12px 0;
+}
+
+/* ================= MAIN CONTENT ================= */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+    overflow-y: auto;
+}
+
+/* Чипси / Категорії */
+.categories {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.chip {
+    background-color: #272727;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.chip:hover {
+    background-color: #3f3f3f;
+}
+
+.chip.active {
+    background-color: #fff;
+    color: #0f0f0f;
+}
+
+/* Сетка видеокарт */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.video-card {
+    width: calc(25% - 12px); /* 4 колонки */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #272727;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 4px;
+    border-radius: 4px;
+}
+
+.video-details {
+    display: flex;
+    gap: 12px;
+}
+
+.channel-avatar {
+    width: 36px;
+    height: 36px;
+    background-color: #444;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.channel-name, .video-meta {
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.3;
+}
+
+/* Адаптивность под разрешения экрана */
+@media (max-width: 1100px) {
+    .video-card {
+        width: calc(33.333% - 11px);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-card {
+        width: calc(50% - 8px);
+    }
+    .sidebar {
+        width: 72px;
+    }
+    .sidebar .nav-item span:last-child,
+    .sidebar .section-title,
+    .sidebar hr {
+        display: none;
+    }
+}
