@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота — Реєстрація користувача</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <main>
+        <h1>Форма реєстрації</h1>
+
+        <form action="https://webhook.site/5c310df8-42da-499e-9b95-7e6e9667a44b" method="POST">
+            
+            <div>
+                <label for="first_name">Ім'я:</label><br>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <br>
+            <div>
+                <label for="last_name">Прізвище:</label><br>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Електронна пошта:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="confirm_password">Підтвердження паролю:</label><br>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="birth_date">Дата народження:</label><br>
+                <input type="date" id="birth_date" name="birth_date">
+            </div>
+            <br>
+
+            <div>
+                <label for="gender">Стать:</label><br>
+                <select id="gender" name="gender">
+                    <option value="">-- Оберіть стать --</option>
+                    <option value="male">Чоловіча</option>
+                    <option value="female">Жіноча</option>
+                    <option value="other">Інша</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <input type="submit" value="Зареєструватися">
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
