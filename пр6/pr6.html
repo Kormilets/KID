@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Among Us Space Animation — Лабораторна робота</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pr6.css">
+</head>
+<body>
+
+  <!-- Керування паузою на чистому CSS через чекбокс -->
+  <input type="checkbox" id="toggle-pause" class="pause-checkbox">
+
+  <div class="space-scene">
+    <!-- Кнопка паузи / старту -->
+    <label for="toggle-pause" class="control-btn">
+      <span class="label-pause">❚❚ ПАУЗА</span>
+      <span class="label-play">▶ СТАРТ</span>
+    </label>
+
+    <!-- 3 шари паралакс-зірок -->
+    <div class="stars stars-far"></div>
+    <div class="stars stars-mid"></div>
+    <div class="stars stars-near"></div>
+
+    <!-- Планета з кільцем на фоні -->
+    <div class="planet-container">
+      <div class="planet"></div>
+      <div class="planet-ring"></div>
+    </div>
+
+    <!-- Комета -->
+    <div class="comet"></div>
+
+    <!-- Головний персонаж (Червоний) — літає і крутиться -->
+    <div class="crewmate-orbit main-crewmate">
+      <div class="crewmate-sprite red"></div>
+    </div>
+
+    <!-- Другий персонаж (Блакитний) на дальньому плані -->
+    <div class="crewmate-orbit secondary-crewmate">
+      <div class="crewmate-sprite cyan"></div>
+    </div>
+
+    <!-- Класичний напис із гри по центру -->
+    <div class="eject-text">
+      Red was An Impostor.
+    </div>
+  </div>
+
+</body>
+</html>
