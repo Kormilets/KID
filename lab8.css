@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: #21243D;
+    background-color: #FFFFFF;
+    line-height: 1.5;
+}
+
+/* --- ШАПКА ТА БУРГЕР-МЕНЮ --- */
+.header {
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 27px 60px;
+    position: relative;
+}
+
+.burger-checkbox,
+.burger-btn {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 33px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #FF6464;
+}
+
+/* --- HERO СЕКЦІЯ --- */
+.portfolio {
+    max-width: 856px;
+    margin: 0 auto;
+    padding: 80px 20px 70px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #21243D;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #21243D;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: -5px;
+    width: 243px;
+    height: 243px;
+    background-color: #EDF7FA;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 1;
+    width: 243px;
+    height: 243px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-resume {
+    display: inline-block;
+    margin-top: 32px;
+    background-color: #FF6464;
+    color: #FFFFFF;
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-resume:hover {
+    background-color: #e85353;
+}
+
+/* --- СЕКЦІЯ ПРАКТИЧНИХ РОБІТ (Recent posts) --- */
+.pr-section {
+    background-color: #EDF7FA;
+    padding: 25px 20px 35px;
+}
+
+.practicals-container {
+    max-width: 856px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #21243D;
+}
+
+.view-all {
+    text-decoration: none;
+    color: #00A8CC;
+    font-size: 16px;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 24px 22px 28px;
+    box-shadow: 0 4px 10px rgba(187, 225, 250, 0.25);
+}
+
+.post-card h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #21243D;
+    margin-bottom: 14px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    color: #21243D;
+    margin-bottom: 14px;
+}
+
+.post-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #21243D;
+}
+
+/* --- СЕКЦІЯ ЛАБОРАТОРНИХ РОБІТ (Featured works) --- */
+.lab-section {
+    padding: 25px 20px 60px;
+}
+
+.labs-grid {
+    max-width: 856px;
+    margin: 0 auto;
+}
+
+.labs-grid > h2 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #21243D;
+    margin-bottom: 22px;
+}
+
+.work-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.work-item img {
+    width: 246px;
+    height: 180px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.work-info h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #21243D;
+    margin-bottom: 14px;
+}
+
+.work-meta {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 16px;
+}
+
+.work-info .year {
+    display: inline-block;
+    background-color: #142850;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+
+.work-meta .category {
+    font-size: 20px;
+    color: #8695A4;
+}
+
+.work-info p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #21243D;
+    margin-bottom: 14px;
+}
+
+.work-info a {
+    display: inline-block;
+    text-decoration: none;
+    color: #00A8CC;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.work-info a:hover {
+    color: #FF6464;
+    text-decoration: underline;
+}
+
+/* --- FOOTER --- */
+.footer {
+    padding: 50px 20px 54px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 26px;
+}
+
+.social-links a {
+    color: #21243D;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+}
+
+.social-links a:hover {
+    color: #FF6464;
+    transform: translateY(-2px);
+}
+
+.copyright {
+    font-size: 14px;
+    color: #21243D;
+}
+
+/* =================================================
+   АДАПТИВНІСТЬ ПІД МОБІЛЬНІ ПРИСТРОЇ (FIGMA MOBILE)
+   ================================================= */
+@media (max-width: 768px) {
+    /* Шапка та бургер-меню */
+    .header {
+        padding: 20px 18px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .burger-btn span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #21243D;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Анімація бургера в хрестик */
+    .burger-checkbox:checked + .burger-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-checkbox:checked + .burger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-checkbox:checked + .burger-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Випадаюче мобільне меню */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 24px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        z-index: 15;
+    }
+
+    .burger-checkbox:checked ~ .nav {
+        display: flex;
+    }
+
+    /* Hero блок на мобільному */
+    .portfolio {
+        padding: 25px 24px 58px;
+        text-align: center;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 34px;
+    }
+
+    /* Зменшення аватара до 170x170px як у Figma Mobile */
+    .hero-image::before,
+    .hero-image img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .hero-image::before {
+        top: 9px;
+        left: -4px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+
+    .btn-resume {
+        margin-top: 26px;
+    }
+
+    /* Практичні роботи (Recent posts) */
+    .pr-section {
+        padding: 18px 12px 38px;
+    }
+
+    .section-header {
+        justify-content: center;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+
+    .view-all {
+        display: none; /* У мобільному макеті Figma приховано */
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .post-card {
+        padding: 18px 20px 22px;
+    }
+
+    .post-card h3 {
+        font-size: 22px;
+        line-height: 1.35;
+    }
+
+    .post-meta {
+        font-size: 16px;
+        gap: 12px;
+    }
+
+    /* Лабораторні роботи (Featured works) */
+    .lab-section {
+        padding: 18px 18px 40px;
+    }
+
+    .labs-grid > h2 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .work-item {
+        flex-direction: column;
+        gap: 16px;
+        padding-bottom: 20px;
+        margin-bottom: 24px;
+    }
+
+    .work-item img {
+        width: 100%;
+        height: 230px;
+    }
+
+    .work-info h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .work-info .year {
+        font-size: 16px;
+    }
+
+    .work-meta .category {
+        font-size: 16px;
+    }
+}

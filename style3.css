@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fefeff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #b5bac1;
+}
+
+/* Корпус клавіатури */
+.keyboard {
+    background: linear-gradient(135deg, #fefeff 0%, #a5a9b3 100%);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid #202225;
+}
+
+/* Верхня панель (індикатори) */
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+.indicators {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: #80848e;
+    gap: 3px;
+}
+
+.indicator-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #1a1b1e;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.indicator.active .indicator-dot {
+    background-color: #00ffcc;
+    box-shadow: 0 0 6px #00ffcc, inset 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Основний макет блоків */
+.main-layout {
+    display: flex;
+    gap: 15px;
+}
+
+.keyboard-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.row {
+    display: flex;
+    gap: 6px;
+}
+
+/* Стилі окремих клавіш */
+.key {
+    background: linear-gradient(to bottom, #3b3f46, #2c2f33);
+    border: 1px solid #1f2124;
+    border-bottom: 3px solid #151618;
+    border-radius: 6px;
+    color: #dcddde;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.08s ease;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    height: 44px;
+    width: 44px;
+}
+
+.key:hover {
+    background: linear-gradient(to bottom, #454a52, #34373c);
+    color: #ffffff;
+}
+
+/* Ефект натискання */
+.key:active, .key.pressed {
+    background: #25272a;
+    border-bottom-width: 1px;
+    transform: translateY(2px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Різні розміри клавіш */
+.key.w-1-25 { width: 55px; }
+.key.w-1-5 { width: 69px; }
+.key.w-1-75 { width: 82.5px; }
+.key.w-2 { width: 94px; }
+.key.w-2-25 { width: 105.5px; }
+.key.w-2-75 { width: 130px; }
+.key.w-6-25 { width: 300px; }
+
+.key .sub {
+    font-size: 10px;
+    color: #96989d;
+    line-height: 1;
+}
+
+.key .main {
+    line-height: 1;
+}
+
+.key.double {
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+/* Відступи */
+.gap-md { margin-left: 15px; }
+
+/* Цифровий блок (Numpad) */
+.numpad-container {
+    display: grid;
+    grid-template-columns: repeat(4, 44px);
+    grid-template-rows: repeat(5, 44px);
+    gap: 6px;
+}
+
+.numpad-container .key {
+    width: 100%;
+    height: 100%;
+}
+
+.numpad-container .key.h-span {
+    grid-row: span 2;
+    height: 94px;
+}
+
+.numpad-container .key.w-span {
+    grid-column: span 2;
+    width: 94px;
+}
+
+/* Екран виведення тексту */
+.output-screen {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 900px;
+    background: #1e1f22;
+    border: 1px solid #35363c;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    color: #00ffcc;
+    min-height: 48px;
+    word-break: break-all;
+}

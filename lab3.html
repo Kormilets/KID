@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone — Лабораторна №3</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <button class="icon-btn menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="logo">
+                <span class="yt-icon">
+                    <svg viewBox="0 0 24 24" width="28" height="20" fill="#FF0000">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </span>
+                <span class="logo-text">YouTube</span><sup>UA</sup>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="search-box">
+                <input type="text" placeholder="Пошук">
+                <button class="search-btn" title="Шукати">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+            <button class="icon-btn mic-btn" title="Голосовий пошук">
+                <span class="material-symbols-outlined">mic</span>
+            </button>
+        </div>
+
+        <div class="header-right">
+            <button class="create-btn">
+                <span class="material-symbols-outlined">add</span>
+                <span>Створити</span>
+            </button>
+            <button class="icon-btn" title="Сповіщення">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="user-avatar">B</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav-section">
+                <a href="#" class="nav-item active">
+                    <span class="material-symbols-outlined">home</span>
+                    <span>Головна</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">bolt</span>
+                    <span>Shorts</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">subscriptions</span>
+                    <span>Підписки</span>
+                </a>
+            </nav>
+            
+            <hr>
+            
+            <div class="nav-section">
+                <div class="section-title">Підписки</div>
+                <a href="#" class="nav-item">
+                    <div class="channel-dot"></div>
+                    <span>windy31</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <div class="channel-dot"></div>
+                    <span>Kuplinov ► Play</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <div class="channel-dot"></div>
+                    <span>Супер Сус</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <div class="channel-dot"></div>
+                    <span>sndk</span>
+                </a>
+            </div>
+
+            <hr>
+
+            <div class="nav-section">
+                <div class="section-title">Ви</div>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">account_box</span>
+                    <span>Мій канал</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">history</span>
+                    <span>Історія</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="categories">
+                <button class="chip active">Усі</button>
+                <button class="chip">Новини</button>
+                <button class="chip">Відеоігри</button>
+                <button class="chip">Музика</button>
+                <button class="chip">Джеми</button>
+                <button class="chip">Зараз в ефірі</button>
+                <button class="chip">Екшн і пригоди</button>
+                <button class="chip">Мультфільми</button>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/Ms-smHqK2IU/hqdefault.jpg" alt="Губка Боб Квадратні Штани" class="thumbnail-img">
+                        <div class="duration">23:23</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-avatar"></div>
+                        <div class="video-text">
+                            <h3 class="video-title">Губка Боб Квадратні Штани | Тошнотний бургер</h3>
+                            <p class="channel-name">Нікелодеон Кирилиця</p>
+                            <p class="video-meta">13 млн переглядів • 2 роки тому</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/Rn1pD45ok3c/hqdefault.jpg" alt="Steam Deck" class="thumbnail-img">
+                        <div class="duration">23:02</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-avatar"></div>
+                        <div class="video-text">
+                            <h3 class="video-title">ВЕЛИКИЙ STEAM DECK. Що він може у 2026?</h3>
+                            <p class="channel-name">Igarisen</p>
+                            <p class="video-meta">283 тис. переглядів • 7 міс. тому</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/0lEO0u1_ooY/hqdefault.jpg" alt="Moylo Trailer" class="thumbnail-img">
+                        <div class="duration">0:33</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-avatar"></div>
+                        <div class="video-text">
+                            <h3 class="video-title">Moylo | Classic Cartoony Game Teaser Trailer</h3>
+                            <p class="channel-name">Moylo</p>
+                            <p class="video-meta">4,1 млн переглядів • 3 тиж. тому</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/_PtFdKqLF_E/hqdefault.jpg" alt="ШІ-Реклама" class="thumbnail-img">
+                        <div class="duration">11:59</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-avatar"></div>
+                        <div class="video-text">
+                            <h3 class="video-title">Я ПОДИВИВСЯ ВСЮ ШІ-РЕКЛАМУ</h3>
+                            <p class="channel-name">sndk</p>
+                            <p class="video-meta">2.9 млн переглядів • 10 міс. тому</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
